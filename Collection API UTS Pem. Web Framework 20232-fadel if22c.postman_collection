@@ -12,7 +12,20 @@
 			"item": [
 				{
 					"name": "read",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6NCwibmFtZSI6ImFkbWluIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzE2MTMxNDU2LCJleHAiOjE3MTYxMzUwNTZ9.oBnfgV4UpWN5-zVGVrq84dk1xHrh_wWM0nbsgZ5vOw8",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [
 							{
@@ -20,10 +33,22 @@
 								"value": "{{jwtToken}}"
 							}
 						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
 						"url": {
-							"raw": "{{baseUrl}}/api/categories",
+							"raw": "https://utspbffadel1068.sistemapotekmitragaluh.com/api/categories",
+							"protocol": "https",
 							"host": [
-								"{{baseUrl}}"
+								"utspbffadel1068",
+								"sistemapotekmitragaluh",
+								"com"
 							],
 							"path": [
 								"api",
@@ -37,16 +62,26 @@
 				{
 					"name": "create",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6NCwibmFtZSI6ImFkbWluIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzE2MTMxNDU2LCJleHAiOjE3MTYxMzUwNTZ9.oBnfgV4UpWN5-zVGVrq84dk1xHrh_wWM0nbsgZ5vOw8",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "{{jwtToken}}"
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwibmFtZSI6ImFkbWluIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzE2MDU0MDI2LCJleHAiOjE3MTYwNTc2MjZ9.VYV_umVlUphgknbsIJW8vf2BJ8Jsj438mgfDuYKGcOE"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"isi kan <name> <categories>\"\r\n}",
+							"raw": "{\r\n    \"name\": \"softdrink\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -54,9 +89,12 @@
 							}
 						},
 						"url": {
-							"raw": "{{baseUrl}}/api/categories",
+							"raw": "https://utspbffadel1068.sistemapotekmitragaluh.com/api/categories",
+							"protocol": "https",
 							"host": [
-								"{{baseUrl}}"
+								"utspbffadel1068",
+								"sistemapotekmitragaluh",
+								"com"
 							],
 							"path": [
 								"api",
@@ -70,6 +108,16 @@
 				{
 					"name": "update",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6NCwibmFtZSI6ImFkbWluIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzE2MTMxNDU2LCJleHAiOjE3MTYxMzUwNTZ9.oBnfgV4UpWN5-zVGVrq84dk1xHrh_wWM0nbsgZ5vOw8",
+									"type": "string"
+								}
+							]
+						},
 						"method": "PUT",
 						"header": [
 							{
@@ -79,7 +127,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"isi kan <name> <categories>\"\r\n}",
+							"raw": "{\r\n    \"name\": \"makanan ringan\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -87,14 +135,17 @@
 							}
 						},
 						"url": {
-							"raw": "{{baseUrl}}/api/categories/{{id}}",
+							"raw": "https://utspbffadel1068.sistemapotekmitragaluh.com/api/categories/2",
+							"protocol": "https",
 							"host": [
-								"{{baseUrl}}"
+								"utspbffadel1068",
+								"sistemapotekmitragaluh",
+								"com"
 							],
 							"path": [
 								"api",
 								"categories",
-								"{{id}}"
+								"2"
 							]
 						},
 						"description": "menyunting kategori sesuai id yang dipilih"
@@ -104,6 +155,16 @@
 				{
 					"name": "delete",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6NCwibmFtZSI6ImFkbWluIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzE2MTMxNDU2LCJleHAiOjE3MTYxMzUwNTZ9.oBnfgV4UpWN5-zVGVrq84dk1xHrh_wWM0nbsgZ5vOw8",
+									"type": "string"
+								}
+							]
+						},
 						"method": "DELETE",
 						"header": [
 							{
@@ -112,14 +173,17 @@
 							}
 						],
 						"url": {
-							"raw": "{{baseUrl}}/api/categories/{{id}}",
+							"raw": "https://utspbffadel1068.sistemapotekmitragaluh.com/api/categories/3",
+							"protocol": "https",
 							"host": [
-								"{{baseUrl}}"
+								"utspbffadel1068",
+								"sistemapotekmitragaluh",
+								"com"
 							],
 							"path": [
 								"api",
 								"categories",
-								"{{id}}"
+								"3"
 							]
 						},
 						"description": "menghapus kategori sesuai dengan id yang dipilih"
@@ -135,17 +199,30 @@
 				{
 					"name": "read",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MiwibmFtZSI6IkZBREVMIFJBSUhBTiBBU1NISURESVFJRSBVQlBLQVJBV0FORyIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzE2MTMyNTA4LCJleHAiOjE3MTYxMzYxMDh9.-7HSTtFt_AAIYknkrAfNFNFeC-BSiB-gEVgUqFctogU",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
 						"header": [
 							{
 								"key": "Authorization",
-								"value": "{{jwtToken}}"
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwibmFtZSI6ImFkbWluIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzE2MDU5ODMyLCJleHAiOjE3MTYwNjM0MzJ9.VEK4mG_rIgb1yAVHbkr4jpOVpTPxbCGtm3XCIGDvHR8"
 							}
 						],
 						"url": {
-							"raw": "{{baseUrl}}/api/products",
+							"raw": "https://utspbffadel1068.sistemapotekmitragaluh.com/api/products",
+							"protocol": "https",
 							"host": [
-								"{{baseUrl}}"
+								"utspbffadel1068",
+								"sistemapotekmitragaluh",
+								"com"
 							],
 							"path": [
 								"api",
@@ -159,6 +236,16 @@
 				{
 					"name": "create",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6NCwibmFtZSI6ImFkbWluIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzE2MTMxNDU2LCJleHAiOjE3MTYxMzUwNTZ9.oBnfgV4UpWN5-zVGVrq84dk1xHrh_wWM0nbsgZ5vOw8",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [
 							{
@@ -171,41 +258,44 @@
 							"formdata": [
 								{
 									"key": "name",
-									"value": "isi kan nama produk",
+									"value": "bengbeng",
 									"type": "text"
 								},
 								{
 									"key": "description",
-									"value": "isi kan deskripsi produk",
+									"value": "makanan",
 									"type": "text"
 								},
 								{
 									"key": "price",
-									"value": "isi kan harga produk",
+									"value": "5000",
 									"type": "text"
 								},
 								{
 									"key": "category_id",
-									"value": "isi kan nama kategori produk (bukan id nya)",
+									"value": "snackbar2",
 									"type": "text"
 								},
 								{
 									"key": "expired_at",
-									"value": "isi kan tanggal kadaluarsa produk",
+									"value": "2023-05-19",
 									"type": "text"
 								},
 								{
 									"key": "image",
 									"description": "upload gambar produk",
 									"type": "file",
-									"src": []
+									"src": "/C:/Users/fadel/Downloads/wallpapersden.com_76396-512x512.jpg"
 								}
 							]
 						},
 						"url": {
-							"raw": "{{baseUrl}}/api/products",
+							"raw": "https://utspbffadel1068.sistemapotekmitragaluh.com/api/products",
+							"protocol": "https",
 							"host": [
-								"{{baseUrl}}"
+								"utspbffadel1068",
+								"sistemapotekmitragaluh",
+								"com"
 							],
 							"path": [
 								"api",
@@ -224,7 +314,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwibmFtZSI6ImFkbWluIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzE2MDYwNDA3LCJleHAiOjE3MTYwNjQwMDd9.XFGAWcjhUUKRX2kxFGhpizAgWG0cnlvcdU5RqHs47Ts",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6NCwibmFtZSI6ImFkbWluIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzE2MTMxNDU2LCJleHAiOjE3MTYxMzUwNTZ9.oBnfgV4UpWN5-zVGVrq84dk1xHrh_wWM0nbsgZ5vOw8",
 									"type": "string"
 								}
 							]
@@ -237,28 +327,50 @@
 							}
 						],
 						"body": {
-							"mode": "raw",
-							"raw": "{name:qtela\r\ndescription:makanan ringan\r\nprice:15000\r\ncategory_id:snack77\r\nexpired_at:2025-05-19}",
-							"options": {
-								"raw": {
-									"language": "json"
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "bengbeng",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "snackbar",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "15000",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "category_id",
+									"value": "snack77",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "expired_at",
+									"value": "2025-05-19",
+									"type": "text",
+									"disabled": true
 								}
-							}
+							]
 						},
 						"url": {
-							"raw": "http://127.0.0.1:8000/api/products/1",
-							"protocol": "http",
+							"raw": "https://utspbffadel1068.sistemapotekmitragaluh.com/api/products/2",
+							"protocol": "https",
 							"host": [
-								"127",
-								"0",
-								"0",
-								"1"
+								"utspbffadel1068",
+								"sistemapotekmitragaluh",
+								"com"
 							],
-							"port": "8000",
 							"path": [
 								"api",
 								"products",
-								"1"
+								"2"
 							]
 						},
 						"description": "menyunting data produk sesuai dengan id yang dipilih"
@@ -268,6 +380,16 @@
 				{
 					"name": "delete",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6NCwibmFtZSI6ImFkbWluIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzE2MTMxNDU2LCJleHAiOjE3MTYxMzUwNTZ9.oBnfgV4UpWN5-zVGVrq84dk1xHrh_wWM0nbsgZ5vOw8",
+									"type": "string"
+								}
+							]
+						},
 						"method": "DELETE",
 						"header": [
 							{
@@ -276,14 +398,17 @@
 							}
 						],
 						"url": {
-							"raw": "{{baseUrl}}/api/products/{{id}}",
+							"raw": "https://utspbffadel1068.sistemapotekmitragaluh.com/api/products/3",
+							"protocol": "https",
 							"host": [
-								"{{baseUrl}}"
+								"utspbffadel1068",
+								"sistemapotekmitragaluh",
+								"com"
 							],
 							"path": [
 								"api",
 								"products",
-								"{{id}}"
+								"3"
 							]
 						},
 						"description": "menghapus data produk dengan id yang dipilih"
@@ -296,11 +421,21 @@
 		{
 			"name": "register",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6NCwibmFtZSI6ImFkbWluIiwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzE2MTI2MDMwLCJleHAiOjE3MTYxMjk2MzB9.NxKr2z9YDVwo8m0SCc1EZ_NwOBVOwKSul89oF5DQILU",
+							"type": "string"
+						}
+					]
+				},
 				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"name\":\"isi kan nama\",\r\n    \"email\":\"isi kan email\",\r\n    \"password\": \"isi kan password\"\r\n}",
+					"raw": "{\r\n    \"name\":\"raihan\",\r\n    \"email\":\"raihan@gmail.com\",\r\n    \"password\": \"adminnnn\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -308,9 +443,12 @@
 					}
 				},
 				"url": {
-					"raw": "{{baseUrl}}/api/register",
+					"raw": "https://utspbffadel1068.sistemapotekmitragaluh.com/api/register",
+					"protocol": "https",
 					"host": [
-						"{{baseUrl}}"
+						"utspbffadel1068",
+						"sistemapotekmitragaluh",
+						"com"
 					],
 					"path": [
 						"api",
@@ -324,11 +462,21 @@
 		{
 			"name": "login",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwibmFtZSI6IkZhZGVsIFJhaWhhbiBBIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3MTYwNjQyODYsImV4cCI6MTcxNjA2Nzg4Nn0.6rBxhMkmXtgzoC9BKgplWzL1TVrrOTE69llZtjvxhUA",
+							"type": "string"
+						}
+					]
+				},
 				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"email\":\"isi kan email\",\r\n    \"password\":\"isi kan password\"\r\n}",
+					"raw": "{\r\n    \"email\":\"admin@gmail.com\",\r\n    \"password\":\"admin\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -336,9 +484,12 @@
 					}
 				},
 				"url": {
-					"raw": "{{baseUrl}}/api/login",
+					"raw": "https://utspbffadel1068.sistemapotekmitragaluh.com/api/login",
+					"protocol": "https",
 					"host": [
-						"{{baseUrl}}"
+						"utspbffadel1068",
+						"sistemapotekmitragaluh",
+						"com"
 					],
 					"path": [
 						"api",
@@ -354,9 +505,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{baseUrl}}/api/oauth/register",
+					"raw": "https://utspbffadel1068.sistemapotekmitragaluh.com/api/oauth/register",
+					"protocol": "https",
 					"host": [
-						"{{baseUrl}}"
+						"utspbffadel1068",
+						"sistemapotekmitragaluh",
+						"com"
 					],
 					"path": [
 						"api",

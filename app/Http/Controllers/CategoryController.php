@@ -18,9 +18,9 @@ class CategoryController extends Controller
             return response()->json($validator->messages())->setStatusCode(422);
         }
 
-        $validated = $validator->validated();
+        $validatedData = $validator->validated();
 
-        $category = Category::create($validated);
+        $category = Category::create($validatedData);
 
         return response()->json([
             'message' => "Data Berhasil Disimpan",
@@ -32,12 +32,11 @@ class CategoryController extends Controller
     {
         $categories = Category::all();
         return response()->json([
-            'msg' => 'Data Kategori Keseluruhan',
+            'message' => 'Data Kategori Keseluruhan',
             'data' => $categories
         ], 200);
     }
 
-   
     public function update(Request $request, $id)
     {
         $validator = Validator::make($request->all(), [
@@ -48,21 +47,21 @@ class CategoryController extends Controller
             return response()->json($validator->messages())->setStatusCode(422);
         }
 
-        $validated = $validator->validated();
+        $validatedData = $validator->validated();
 
         $category = Category::find($id);
 
         if ($category) {
-            $category->update($validated);
+            $category->update($validatedData);
 
             return response()->json([
-                'msg' => 'Data dengan id: ' . $id . ' berhasil diupdate',
+                'message' => 'Data dengan id: ' . $id . ' berhasil diupdate',
                 'data' => $category
             ], 200);
         }
 
         return response()->json([
-            'msg' => 'Data dengan id: ' . $id . ' tidak ditemukan'
+            'message' => 'Data dengan id: ' . $id . ' tidak ditemukan'
         ], 404);
     }
 
@@ -74,12 +73,12 @@ class CategoryController extends Controller
             $category->delete();
 
             return response()->json([
-                'msg' => 'Data kategori dengan ID: ' . $id . ' berhasil dihapus'
+                'message' => 'Data kategori dengan ID: ' . $id . ' berhasil dihapus'
             ], 200);
         }
 
         return response()->json([
-            'msg' => 'Data kategori dengan ID: ' . $id . ' tidak ditemukan',
+            'message' => 'Data kategori dengan ID: ' . $id . ' tidak ditemukan',
         ], 404);
     }
 }
